@@ -33,7 +33,7 @@ def check(message):
    itembtn2 = types.KeyboardButton('B')
    itembtn3 = types.KeyboardButton('C')
    itembtn4 = types.KeyboardButton('D')
-   itembtn5 = types.KeyboardButton('F')
+   itembtn5 = types.KeyboardButton('E')
    markup.add(itembtn1, itembtn2, itembtn3, itembtn4, itembtn5)
    bot.send_message(message.chat.id, text, parse_mode='HTML', reply_markup=markup)
 
@@ -41,7 +41,7 @@ def check(message):
 
 @bot.message_handler(func=lambda msg: msg.text is not None)
 def reply_to_message(message):
-   sendMessage(message, 'Hello! Sorry idk what you are saying')
+   sendMessage(message, 'Sorry idk what you are saying!')
 
 
 # SERVER SIDE 
