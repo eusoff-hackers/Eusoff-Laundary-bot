@@ -1,5 +1,6 @@
 import os
 import telebot
+from telebot import types
 from flask import Flask, request
 
 TOKEN = '1344716453:AAH9b9tDUgGsP49GleNo0rnWDZn_bgr0qRo'
@@ -16,10 +17,26 @@ def sendMessage(message, text):
 def send_info(message):
    text = (
    "<b>Welcome to the Eusoff laundary bot 🤖!</b>\n"
-   "Please select your block !"
+   "/check - check the avilbility of washing machine in your block"
    )
    bot.send_message(message.chat.id, text, parse_mode='HTML')
-# This method will fire whenever the bot receives a message from a user, it will check that there is actually a not empty string in it and, in this case, it will check if there is the 'hello' word in it, if so it will reply with the message we defined
+
+# This method will fire whenever the bot receives a message from a user,
+@bot.message_handler(commands=['check'])
+def check(message):
+   text = (
+   "<b>Please select your block! </b>\n"
+   )
+
+   markup = types.ReplyKeyboardMarkup(row_width=2)
+   itembtn1 = types.KeyboardButton('A')
+   itembtn2 = types.KeyboardButton('B')
+   itembtn3 = types.KeyboardButton('C')
+   itembtn4 = types.KeyboardButton('D')
+   itembtn5 = types.KeyboardButton('F')
+   markup.add(itembtn1, itembtn2, itembtn3, itembtn4, itembtn5)
+   bot.send_message(message.chat.id, text, parse_mode='HTML')
+
 
 
 @bot.message_handler(func=lambda msg: msg.text is not None)
