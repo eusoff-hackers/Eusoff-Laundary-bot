@@ -35,7 +35,7 @@ def check(message):
    itembtn4 = types.KeyboardButton('D')
    itembtn5 = types.KeyboardButton('F')
    markup.add(itembtn1, itembtn2, itembtn3, itembtn4, itembtn5)
-   bot.send_message(message.chat.id, text, parse_mode='HTML')
+   bot.send_message(message.chat.id, text, parse_mode='HTML', reply_markup=markup)
 
 
 
