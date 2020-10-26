@@ -16,7 +16,7 @@ def sendMessage(message, text):
 def send_info(message):
    text = (
    "<b>Welcome to the Eusoff laundary bot 🤖!</b>\n"
-   "Its not working atm!"
+   "Please select your block !"
    )
    bot.send_message(message.chat.id, text, parse_mode='HTML')
 # This method will fire whenever the bot receives a message from a user, it will check that there is actually a not empty string in it and, in this case, it will check if there is the 'hello' word in it, if so it will reply with the message we defined
@@ -24,8 +24,7 @@ def send_info(message):
 
 @bot.message_handler(func=lambda msg: msg.text is not None)
 def reply_to_message(message):
-   if 'hello'in message.text.lower():
-      sendMessage(message, 'Hello! How are you doing today?')
+   sendMessage(message, 'Hello! Sorry idk what you are saying')
 
 
 # SERVER SIDE 
