@@ -15,7 +15,7 @@ def sendMessage(message, text):
 @bot.message_handler(commands=['start'])
 def send_info(message):
    text = (
-   "<b>Welcome to the Eusoff laundary bot 🤖</b>\n"
+   "<b>Welcome to the Eusoff laundary bot 🤖!</b>\n"
    "Its not working atm!"
    )
    bot.send_message(message.chat.id, text, parse_mode='HTML')
