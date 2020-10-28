@@ -54,15 +54,20 @@ def gen_markup():
 @bot.callback_query_handler(func=lambda call: True)
 def callback_query(call):
     if call.data == "A":
-        bot.send_message(call.message, "Sorry, all the waching machine in A block is occupied")
+        bot.answer_callback_query(call.id, "A")
+        bot.sendMessage(call.message, "Sorry, all the waching machine in A block is occupied")
     elif call.data == "B":
-        bot.send_message(call.message, "Sorry, all the waching machine in B block is occupied")
+        bot.answer_callback_query(call.id, "B")
+        bot.sendMessage(call.message, "Sorry, all the waching machine in B block is occupied")
     elif call.data == "C":
-        bot.send_message(call.message, "Sorry, all the waching machine in C block is occupied")
+        bot.answer_callback_query(call.id, "C")
+        bot.sendMessage(call.message, "Sorry, all the waching machine in C block is occupied")
     elif call.data == "D":
-        bot.send_message(call.message, "Sorry, all the waching machine in D block is occupied")
+        bot.answer_callback_query(call.id, "D")
+        bot.sendMessage(call.message, "Sorry, all the waching machine in D block is occupied")
     elif call.data == "E":
-        bot.send_message(call.message, "Sike I aint gonna tell u anything")
+        bot.answer_callback_query(call.id, "E")
+        bot.sendMessage(call.message, "Sike I aint gonna tell u anything")
 
 
 
