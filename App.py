@@ -14,6 +14,7 @@ def sendMessage(message, text):
    bot.send_message(message.chat.id, text)
 # This method will send a message formatted in HTML to the user whenever it starts the bot with the /start command, feel free to add as many commands' handlers as you want
 
+
 @bot.message_handler(commands=['start'])
 def send_info(message):
    text = (
@@ -32,7 +33,7 @@ def check(message):
    text = (
    "<b>Please select your block! </b>\n"
    )
-   
+
    bot.send_message(message.chat.id, text, parse_mode='HTML', reply_markup=gen_markup())
 
 
@@ -54,22 +55,26 @@ def gen_markup():
 def callback_query(call):
     if call.data == "A":
         bot.answer_callback_query(call.id, "A")
+        bot.send_message(call.message, "Sorry, all the waching machine in A block is occupied")
     elif call.data == "B":
         bot.answer_callback_query(call.id, "B")
+        bot.send_message(call.message, "Sorry, all the waching machine in B block is occupied")
     elif call.data == "C":
         bot.answer_callback_query(call.id, "C")
+        bot.send_message(call.message, "Sorry, all the waching machine in C block is occupied")
     elif call.data == "D":
         bot.answer_callback_query(call.id, "D")
+        bot.send_message(call.message, "Sorry, all the waching machine in D block is occupied")
     elif call.data == "E":
         bot.answer_callback_query(call.id, "E")
+        bot.send_message(call.message, "Sorry, all the waching machine in E block is occupied")
 
 
+
+#this method is when user input somthing else 
 @bot.message_handler(func=lambda msg: msg.text is not None)
 def reply_to_message(message):
    sendMessage(message, 'Sorry idk what you are saying!')
-
-
-
 
 
 
