@@ -1,6 +1,7 @@
 import os
 import telebot
 from telebot import types
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from flask import Flask, request
 
 TOKEN = '1344716453:AAH9b9tDUgGsP49GleNo0rnWDZn_bgr0qRo'
@@ -35,9 +36,14 @@ def check(message):
    itembtn4 = types.KeyboardButton('D')
    itembtn5 = types.KeyboardButton('E')
    markup.add(itembtn1, itembtn2, itembtn3, itembtn4, itembtn5)
-   bot.send_message(message.chat.id, text, parse_mode='HTML', reply_markup=markup)
+   bot.send_message(message.chat.id, text, parse_mode='HTML', reply_markup=gen_markup())
 
-
+def gen_markup():
+    markup = InlineKeyboardMarkup()
+    markup.row_width = 2
+    markup.add(InlineKeyboardButton("Yes", callback_data="cb_yes"),
+                               InlineKeyboardButton("No", callback_data="cb_no"))
+    return markup
 
 @bot.message_handler(func=lambda msg: msg.text is not None)
 def reply_to_message(message):
