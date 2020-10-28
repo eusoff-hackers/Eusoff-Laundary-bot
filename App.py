@@ -22,35 +22,58 @@ def send_info(message):
    )
    bot.send_message(message.chat.id, text, parse_mode='HTML')
 
-# This method will fire whenever the bot receives a message from a user,
+
+
+
+
+# This method will fire whenever the bot receives /check
 @bot.message_handler(commands=['check'])
 def check(message):
    text = (
    "<b>Please select your block! </b>\n"
    )
-
-   markup = types.ReplyKeyboardMarkup(row_width=2)
-   itembtn1 = types.KeyboardButton('A')
-   itembtn2 = types.KeyboardButton('B')
-   itembtn3 = types.KeyboardButton('C')
-   itembtn4 = types.KeyboardButton('D')
-   itembtn5 = types.KeyboardButton('E')
-   markup.add(itembtn1, itembtn2, itembtn3, itembtn4, itembtn5)
+   
    bot.send_message(message.chat.id, text, parse_mode='HTML', reply_markup=gen_markup())
 
+
+# This method is to create the inline keyboard of all the block
 def gen_markup():
     markup = InlineKeyboardMarkup()
     markup.row_width = 2
-    markup.add(InlineKeyboardButton("Yes", callback_data="cb_yes"),
-                               InlineKeyboardButton("No", callback_data="cb_no"))
+    markup.add(InlineKeyboardButton("A", callback_data="A"),
+                               InlineKeyboardButton("B", callback_data="B"),
+                               InlineKeyboardButton("C", callback_data="C"),
+                               InlineKeyboardButton("D", callback_data="D"),
+                               InlineKeyboardButton("E", callback_data="E"))
     return markup
+
+
+
+#this method is to handle when the block keyborad is selscted 
+@bot.callback_query_handler(func=lambda call: True)
+def callback_query(call):
+    if call.data == "A":
+        bot.answer_callback_query(call.id, "A")
+    elif call.data == "B":
+        bot.answer_callback_query(call.id, "B")
+    elif call.data == "C":
+        bot.answer_callback_query(call.id, "C")
+    elif call.data == "D":
+        bot.answer_callback_query(call.id, "D")
+    elif call.data == "E":
+        bot.answer_callback_query(call.id, "E")
+
 
 @bot.message_handler(func=lambda msg: msg.text is not None)
 def reply_to_message(message):
    sendMessage(message, 'Sorry idk what you are saying!')
 
 
-# SERVER SIDE 
+
+
+
+
+# SERVER SIDE -------------------------------------------------------------------------------------------------------------
 @server.route('/' + TOKEN, methods=['POST'])
 def getMessage():
    bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
