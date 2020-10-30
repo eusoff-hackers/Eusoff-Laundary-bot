@@ -67,7 +67,7 @@ def callback_query(call):
         sendMessage(call.message, "Sorry, all the waching machine in D block is occupied")
     elif call.data == "E":
         bot.answer_callback_query(call.id, "E")
-        sendMessage(call.message, "Sike I aint gonna tell u anything")
+        sendMessage(call.message, "Sorry, all the waching machine in E block is occupied")
 
 
 
