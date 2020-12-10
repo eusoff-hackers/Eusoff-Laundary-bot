@@ -11,9 +11,9 @@ def generateAnswer(arr, block):
     elif block == "E":
         blockarr = arr[4]
 
-    returnStr = ""
+    returnStr = block + " Block \n  \n"
     for x in range(5):
-        returnStr += "Washing Machine " + str(x)  + " : " + defector(blockarr[x]) + "\n"
+        returnStr += "Washing Machine " + str(x + 1)  + " : " + defector(blockarr[x]) + "\n"
 
     return returnStr
 
