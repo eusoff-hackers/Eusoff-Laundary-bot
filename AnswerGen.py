@@ -19,7 +19,7 @@ def generateAnswer(arr, block):
 
 
 def defector(num):
-    if(num == 1):
+    if(num == "1"):
         return "Avilable"
     else:
         return "Occupied"
