@@ -12,11 +12,11 @@ def findAvilbility():
     # Open the google sheet
     sheet = client.open("WachingMachineData").sheet1
 
-    Acol = sheet.col_values(3)  # A block
-    Bcol = sheet.col_values(3)  # B block
+    Acol = sheet.col_values(1)  # A block
+    Bcol = sheet.col_values(2)  # B block
     Ccol = sheet.col_values(3)  # C block
-    Dcol = sheet.col_values(3)  # D block
-    Ecol = sheet.col_values(3)  # E block
+    Dcol = sheet.col_values(4)  # D block
+    Ecol = sheet.col_values(5)  # E block
 
     print(Acol)
 
