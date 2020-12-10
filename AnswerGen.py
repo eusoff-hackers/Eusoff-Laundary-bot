@@ -12,7 +12,14 @@ def generateAnswer(arr, block):
         blockarr = arr[4]
 
     returnStr = ""
-    for each in blockarr:
-        returnStr += each + " "
+    for x in range(5):
+        returnStr += "Washing Machine " + x  + " : " + defector(blockarr[x]) + "\n"
 
     return returnStr
+
+
+def defector(num):
+    if(num == 1):
+        return "Avilable"
+    else:
+        return "Occupied"
