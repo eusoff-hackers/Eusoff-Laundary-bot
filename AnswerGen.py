@@ -13,7 +13,7 @@ def generateAnswer(arr, block):
 
     returnStr = ""
     for x in range(5):
-        returnStr += "Washing Machine " + x  + " : " + defector(blockarr[x]) + "\n"
+        returnStr += "Washing Machine " + str(x)  + " : " + defector(blockarr[x]) + "\n"
 
     return returnStr
 
