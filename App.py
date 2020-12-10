@@ -3,6 +3,8 @@ import telebot
 from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from flask import Flask, request
+from sheets import findAvilbility
+from AnswerGen import generateAnswer
 
 TOKEN = '1344716453:AAH9b9tDUgGsP49GleNo0rnWDZn_bgr0qRo'
 bot = telebot.TeleBot(token=TOKEN)
@@ -53,21 +55,26 @@ def gen_markup():
 #this method is to handle when the block keyborad is selscted 
 @bot.callback_query_handler(func=lambda call: True)
 def callback_query(call):
+    blockarr = findAvilbility()
     if call.data == "A":
         bot.answer_callback_query(call.id, "A")
-        sendMessage(call.message, "Sorry, all the waching machine in A block is occupied")
+        ans = generateAnswer(blockarr, "A")
+        sendMessage(call.message, ans)
     elif call.data == "B":
         bot.answer_callback_query(call.id, "B")
-        sendMessage(call.message, "Sorry, all the waching machine in B block is occupied")
+        ans = generateAnswer(blockarr, "B")
+        sendMessage(call.message, ans)
     elif call.data == "C":
         bot.answer_callback_query(call.id, "C")
-        sendMessage(call.message, "Sorry, all the waching machine in C block is occupied")
+        ans = generateAnswer(blockarr, "C")
+        sendMessage(call.message, ans)
     elif call.data == "D":
         bot.answer_callback_query(call.id, "D")
-        sendMessage(call.message, "Sorry, all the waching machine in D block is occupied")
+        ans = generateAnswer(blockarr, "D")
+        sendMessage(call.message, ans)
     elif call.data == "E":
-        bot.answer_callback_query(call.id, "E")
-        sendMessage(call.message, "Sorry, all the waching machine in E block is occupied")
+        ans = generateAnswer(blockarr, "E")
+        sendMessage(call.message, ans)
 
 
 

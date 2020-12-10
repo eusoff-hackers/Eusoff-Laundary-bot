@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "white-rigging-251800",
+  "private_key_id": "ee95c89b823bd183d4cb4097610332b87aa2b465",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9Dcu74nFMJW57\nUQ7fCQ2iYduFaRh1gad1qlDibK2vGtJs6xYmBi5RjCUdyVo0I1y0khqdcmiI6h7G\nfKwcJcLnrJhmz/Pr6uUZwEcPJOBStNNrEJ3m++nKAe28hm7f5AN1YqiXScwAaXV0\nnCjp6GbdO0aMN6122GyQPiOVu98svlLxGNsovewWVmjoJPsrPvBDU30TfTWXP7m0\nNSV4BnIqwqKaM3s4f0Dek3dGxOyjbD3PYbaeX76CkLlAgn39WUdNKphwtaRtSG5l\nmpcKf7aPgYpAcJLKq75BrZiIQX+WAufVIxMq8RGBPozvOIIEp0x/C1c5dAW/eRu2\nOUpEA3KXAgMBAAECggEAAvGejQfrJLjmfgQWm7F75V3puauXxmik72eeB9CSacoc\nobaNaz0oZnusrkiO34X3cRZfVLlN2Gfw371cPrn1zX66BsvRLAjF1X9Re/Jijdcj\n/aROGSUuEEe0aH2dZ14ZEbBeGLD8/Lqnqg+ucWn9hA9iu1c4m8Ol+R8GldPNl1g+\neUCzYKkbFxwBZyYzBn6IvKxEJ5t20VdWkSHsTU8wavMRPC3PyuT4/wxXUze9Ha9n\nNJYGEjqn2ZPIRj8NswbK26HXAAK6VQ6j7wDeCTgp2AGQvOMwMG7cGgPRzhTeLinb\nvbz6vQ/xaU6rTVi+Tezv1m+7ZH/3he7O+7QKapMmaQKBgQDvRgiFNGqS/bvqTQYT\nrW7Aj3r6MH/Cuk93Lv7DD+g1EDVviVc4YTNR/zmrBR0Y2ocooTP4arvG2gaer6W8\n6Cv14ck7FGFcDow9zA7ecCfNcjgtvVvpwDk0Cab+47+upXzsyVtJ++jfVjKdaI3H\ngtpd9Pi0TDoloJI1j/AHo/kImQKBgQDKRQvpvoVUxw0CBDRPDAjSdQFRn/s1s+Jc\nPZhcU+0jm17et0rleGfuXZKmHIM+axHDRzT6eDFuYYN+RkaBGBBffIOy8MeXUZJs\npOJh6O/qE0ZqUi6a1kG9TL3FcSnTMHt38uPjQy41HZsFuRPs4xKaqMkNe593ic82\nzBjQlNxirwKBgBcASHllnIkc0x+m39qsZWUlZdD/MIjrmBAA+ISP1uai9EAQl83X\nqjNLsaN7Dl0BRNTnCjPrLrni45gFko0iVHeCiPGg9+r9iwW1xAgmB+17+WKMPXWv\nANC7zM3b3uVPCz9H6/qkuLIfeyYekuKG9a7qia3rVfuf/+4eNBjH7nyhAoGBAK1C\n2+OLqZZnM0NI6q3TdzMfutN6oKrtvbaZpIth8L4RdwB8LZHGw/AxA097GQk8meiW\ndFEg5+bPbN2bwQUP4eaJOB7tlWqPG0gpLSoFaI0vmZ+1aeqEIafPtrcMKnGXFAw5\naO/hOhGRnJsYYHMIR4Vnk2ETRhQVXgRoa9Ev0mBNAoGBAKqsFsoguqMV/ni2bVy6\nIU8y4/Bmyndfr3lxlVyDtZgRXsibMjkjEkrZOoM5tTmWSszTi4oeiHo88Ewhih60\n1e4/GH8PCsE4T5by9xcBlMXubSYx3vffXmmy9HHblvPLvPgSONvQCjq9sEtQGegx\nzaBdEqNe8s09lI9VibASZ1jH\n-----END PRIVATE KEY-----\n",
+  "client_email": "yuichiro@white-rigging-251800.iam.gserviceaccount.com",
+  "client_id": "113170917507311999574",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/yuichiro%40white-rigging-251800.iam.gserviceaccount.com"
+}
