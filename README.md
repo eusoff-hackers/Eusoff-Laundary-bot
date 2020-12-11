@@ -1,5 +1,5 @@
 
-# Eusoff Laundary bot - telegrambot
+# Eusoff Laundry bot - telegrambot
 
 ## Overall
 This project enables users/residents to see real-time availability information on washing machines though telegram bot.
@@ -11,6 +11,9 @@ For telegram bot API we are using pyTelegramBotAPI (https://pypi.org/project/pyT
 
 V1.0 - The hardware system is able to receive data reliably from one washing machine from one laundry room. Backend provides an API for clients to make query requests, these API reflect real-time data.
 
+## Fetures to be added
+
+Reminder : Reminder for user to take out thier laundary 
 
 ## Requirement 
 
